@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Logo da Hamburgueria -->
+    <ImageView
+        android:id="@+id/logo_hamburgueria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="Logo da Hamburgueria"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_burguer" />
+
+    <!-- Campo nome da Hamburgueria -->
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/EstiloTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="Hamburgueria Junqueira"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Campo Faça seu pedido -->
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/EstiloTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:text="Faça seu pedido!" />
+
+    <!-- Campo para inserir o nome do cliente -->
+    <EditText
+        android:id="@+id/nome_cliente"
+        style="@style/EstiloTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Nome do Cliente"
+        android:inputType="textPersonName" />
+
+    <!-- Checkbox para adicionais -->
+    <TextView
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="16dp"
+        android:text="Escolha os adicionais:"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/adicional_bacon"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Bacon" />
+
+    <CheckBox
+        android:id="@+id/adicional_queijo"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Queijo" />
+
+    <CheckBox
+        android:id="@+id/adicional_onionrings"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Onion Rings" />
+
+    <!-- Seleção da quantidade de hambúrgueres -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/subtrair_quantidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantidade_escolhida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:text="0"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/adicionar_quantidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Exibição do preço total -->
+    <TextView
+        android:id="@+id/preco_total"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:paddingTop="16dp"
+        android:text="Preço Total: R$ 0,00"
+        android:textSize="18sp" />
+
+
+    <!-- Botão para enviar o pedido -->
+    <Button
+        android:id="@+id/enviar_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:text="Enviar Pedido" />
+
+    <TextView
+        android:id="@+id/resumopedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="Resumo do Pedido"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
